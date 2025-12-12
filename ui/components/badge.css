@@ -1,1 +1,26 @@
+div.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    background-color: var(--badge-bg);
+    border: solid 1px var(--badge-border);
+    text-align: center;
+    margin: 0.5em;
+}
 
+div.badge p{
+    font-size: 13px;
+    color: var(--badge-border);
+}
+
+div.badge svg.icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5em;
+    color: var(--badge-border);
+}
+
+div.badge svg.icon path{
+    stroke-width: 1.3;
+}
