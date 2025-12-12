@@ -1,1 +1,64 @@
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 300;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
 
+button.with-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button.with-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+button.with-icon-huge {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+button.with-icon-huge svg {
+    width: 17px;
+    height: 17px;
+    color: white;
+}
+
+button.primary {
+    background: var(--primary);
+    color: var(--foreground);
+}
+
+button.primary:hover {
+    background: var(--button-hover);
+}
+
+button.primary:active {
+    background: var(--button-pressed);
+}
+
+button.secondary {
+    background: var(--background);
+    color: var(--foreground);
+    border: 1px solid var(--btn-secondary-border);
+}
+
+button.secondary:hover {
+    background: var(--btn-secondary-hover-bg);
+}
+
+button.secondary:active {
+    background: var(--btn-secondary-pressed-bg);
+}
+
+button.secondary svg.icon path {
+    stroke-width: 1.4;
+    stroke: white;
+}
