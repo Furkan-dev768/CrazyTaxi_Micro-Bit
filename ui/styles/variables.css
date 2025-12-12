@@ -1,1 +1,50 @@
+:root {
+    --primary: #5863F8;
+    --foreground: #fff;
+    
+    /* Secondary Text */
+    --txt-secondary: rgba(255, 255, 255, 0.5);
+    
+    /* TitleBar */
+    --title-bar-button-hover: #373737;
+    --title-bar-button-pressed: #424242;
+    --title-bar-close-button-hover: #C42B1C;
+    --title-bar-close-button-pressed: rgba(196, 43, 28, 0.9);
+    
+    /* Background */
+    --background: #2a2a2a;
 
+    /* Button */
+    --button-hover: #626cfc;
+    --button-pressed: #6872fe;
+
+    /* Button Secondary */
+    --btn-secondary-border: #3e3e3e;
+    --btn-secondary-hover-bg: #383838;
+    --btn-secondary-pressed-bg: #393939;
+    
+    /* NavBar Background */
+    --nav-bar-background: #5863F8;
+    --nav-bar-border: #5F95FF;
+
+    /* NavBar ToggleButton */
+    --nav-bar-toggle-button-bg: transparent;
+    --nav-bar-toggle-button-bg-hover: #6973FF;
+    --nav-bar-toggle-button-bg-pressed: #707AFF;
+    --nav-bar-toggle-button-bg-checked: #707AFF;
+    
+    /* Card Background */
+    --card-background: #373737;
+    --card-border: #4D4D4D;
+    --bg-sup-cards: rgba(225, 225, 225, 0.1);
+    
+    /* Day Badge */
+    --day-background: #4A4A4A;
+    
+    /* Progress */
+    --background-progress: rgba(225, 225, 225, 0.1);
+    --foreground-progress: #fff;
+
+    --badge-bg: rgba(120, 129, 255, 0.121);
+    --badge-border: #6c82ff;
+}
