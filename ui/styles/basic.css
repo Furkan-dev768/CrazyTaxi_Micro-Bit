@@ -1,1 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+html {
+    background: var(--background);
+}
+
+p, h1, h2, h3, h4, h5, h6, button, a, span {
+    color: var(--foreground);
+    font-family: 'Inter', sans-serif;
+}
+
+p.gray {
+    color: var(--txt-secondary);
+}
+
+p.mid {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+::selection {
+    background-color: var(--primary);
+    color: #fff;
+  }
