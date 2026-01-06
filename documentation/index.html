@@ -1,1 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation et Configuration - Micro:bit avec Arduino</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/basic.css">
+    <link rel="stylesheet" href="../ui/components/buttons.css">
+    <link rel="stylesheet" href="../ui/components/badge.css">
+    <link rel="stylesheet" href="../ui/components/cards.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="setup.css">
+    <link rel="stylesheet" href="../ui/styles.css">
+    <link rel="stylesheet" href="../ui/components/buttons.css">
+    <link rel="stylesheet" href="../ui/components/badge.css">
+    <link rel="stylesheet" href="../ui/components/cards.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="setup.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div>
+            <div class="badge">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" class="icon">
+                    <path d="M12 8V12L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <p>Guide d'installation</p>
+            </div>
+            <h1 class="title">BBC Micro:bit avec Arduino IDE</h1>
+            <p class="gray mid description">
+                Suivez ce guide étape par étape pour configurer votre environnement de développement 
+                et programmer le micro:bit en langage C avec Arduino IDE.
+            </p>
+        </div>
+    </section>
 
+    <!-- Info Introduction -->
+    <section class="features-section">
+        <div class="content">
+            <h2 class="title">Avant de commencer</h2>
+            <p class="gray mid description">
+                Ce guide vous explique comment configurer votre environnement de développement pour programmer 
+                le micro:bit V2 en langage C. Assurez-vous d'avoir votre micro:bit et un câble USB à portée de main.
+            </p>
+        </div>
+    </section>
+
+    <!-- Étapes d'installation -->
+    <section class="features-section">
+        <div class="content">
+            <div class="cards">
+                <!-- Étape 1 -->
+                <div class="card">
+                    <div class="features-card-header">
+                        <div class="step-number">1</div>
+                        <h3>Télécharger Arduino IDE</h3>
+                    </div>
+                    <p class="gray mid">
+                        Téléchargez et installez la dernière version de l'environnement de développement Arduino 
+                        depuis le site officiel.
+                    </p>
+                    <a href="https://www.arduino.cc/en/software/" target="_blank">
+                        <button class="primary with-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Télécharger Arduino IDE
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Étape 2 -->
+                <div class="card">
+                    <div class="features-card-header">
+                        <div class="step-number">2</div>
+                        <h3>Ajouter le gestionnaire nRF5</h3>
+                    </div>
+                    <p class="gray mid">
+                        Dans Arduino IDE : <br>
+                        <strong>Fichier → Préférences</strong><br>
+                        Ajoutez cette URL dans "Gestionnaire de cartes supplémentaires" :
+                    </p>
+                    <div class="code-box-wrapper">
+                        <div class="code-box">
+                            <code id="url1">https://sandeepmistry.github.io/arduino-nRF5/package_nRF5_boards_index.json</code>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Étape 3 -->
+                <div class="card">
+                    <div class="features-card-header">
+                        <div class="step-number">3</div>
+                        <h3>Installer les cartes Nordic</h3>
+                    </div>
+                    <p class="gray mid">
+                        <strong>Outils → Type de carte → Gestionnaire de cartes</strong><br>
+                        Recherchez "nRF5" et installez :<br>
+                        <em>Nordic Semiconductor nRF5 Boards</em> par Sandeep Mistry
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Étapes 4-6 -->
+    <section class="features-section">
+        <div class="content">
+            <div class="cards">
+                <!-- Étape 4 -->
+                <div class="card">
+                    <div class="features-card-header">
+                        <div class="step-number">4</div>
+                        <h3>Sélectionner la carte</h3>
+                    </div>
+                    <p class="gray mid">
+                        <strong>Outils → Type de carte → Nordic Semiconductor nRF5 Boards → BBC micro:bit V2</strong><br><br>
+                        Assurez-vous de bien sélectionner la version V2.
+                    </p>
+                </div>
+
+                <!-- Étape 5 -->
+                <div class="card">
+                    <div class="features-card-header">
+                        <div class="step-number">5</div>
+                        <h3>Choisir le port</h3>
+                    </div>
+                    <p class="gray mid">
+                        Connectez votre micro:bit via USB, puis :<br>
+                        <strong>Outils → Port</strong><br>
+                        Sélectionnez le port correspondant (COM sur Windows, /dev/tty sur macOS/Linux)
+                    </p>
+                </div>
+
+                <!-- Étape 6 -->
+                <div class="card">
+                    <div class="features-card-header">
+                        <div class="step-number">6</div>
+                        <h3>Compiler et téléverser</h3>
+                    </div>
+                    <p class="gray mid">
+                        Cliquez sur le bouton <strong>Téléverser (→)</strong> pour compiler et envoyer votre programme sur le micro:bit.<br><br>
+                        Le premier téléversement peut prendre quelques minutes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Succès -->
+    <section class="hero-section">
+        <div>
+            <div class="badge success">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" class="icon">
+                    <path d="M5 14l4 4L19 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Félicitations !</p>
+            </div>
+            <h1 class="title">Votre environnement est configuré</h1>
+            <p class="gray mid description">
+                Vous pouvez maintenant commencer à programmer votre micro:bit en langage C avec Arduino IDE.
+            </p>
+        </div>
+    </section>
+
+    <!-- Ressources -->
+    <section class="features-section">
+        <div class="content">
+            <h2 class="title">Ressources et Exemples</h2>
+            <p class="gray mid description">
+                Consultez ces ressources pour trouver des exemples de code et de la documentation
+            </p>
+            
+            <div class="cards">
+                <div class="card animate">
+                    <div class="features-card-header">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+                            <path d="M12 6.25278V19.2528M12 6.25278C10.8321 5.47686 9.24649 5 7.5 5C5.75351 5 4.16789 5.47686 3 6.25278V19.2528C4.16789 18.4769 5.75351 18 7.5 18C9.24649 18 10.8321 18.4769 12 19.2528M12 6.25278C13.1679 5.47686 14.7535 5 16.5 5C18.2465 5 19.8321 5.47686 21 6.25278V19.2528C19.8321 18.4769 18.2465 18 16.5 18C14.7535 18 13.1679 18.4769 12 19.2528" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h3>Guide Adafruit</h3>
+                    </div>
+                    <p class="gray mid">Documentation complète sur l'utilisation du micro:bit avec Arduino</p>
+                    <a href="https://learn.adafruit.com/use-micro-bit-with-arduino/overview" target="_blank">
+                        <button class="secondary with-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                                <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Consulter
+                        </button>
+                    </a>
+                </div>
+
+                <div class="card animate">
+                    <div class="features-card-header">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+                            <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h3>Exemples GitHub</h3>
+                    </div>
+                    <p class="gray mid">Bibliothèque d'exemples de code pour le micro:bit en langage C</p>
+                    <a href="https://github.com/adafruit/Adafruit_Microbit" target="_blank">
+                        <button class="secondary with-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                                <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Voir les exemples
+                        </button>
+                    </a>
+                </div>
+
+                <div class="card animate">
+                    <div class="features-card-header">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+                            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h3>Bibliothèque PlatformIO</h3>
+                    </div>
+                    <p class="gray mid">Plus d'exemples et de ressources pour vos projets micro:bit</p>
+                    <a href="https://registry.platformio.org/libraries/adafruit/Adafruit%20microbit%20Library/examples" target="_blank">
+                        <button class="secondary with-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                                <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Explorer
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dépannage -->
+    <section class="features-section">
+        <div class="content">
+            <h2 class="title">Dépannage</h2>
+            <p class="gray mid description">Solutions aux problèmes courants</p>
+            
+            <div class="cards">
+                <div class="card">
+                    <h3>Le port n'apparaît pas</h3>
+                    <p class="gray mid">Essayez un autre câble USB. Certains câbles ne transfèrent que l'alimentation et pas les données.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Erreur de compilation</h3>
+                    <p class="gray mid">Vérifiez que vous avez bien sélectionné "BBC micro:bit V2" dans le menu Type de carte.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Échec du téléversement</h3>
+                    <p class="gray mid">Appuyez sur le bouton reset du micro:bit et réessayez le téléversement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function copyToClipboard(button, elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copié !';
+                button.style.background = 'var(--primary)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = 'rgba(255, 255, 255, 0.1)';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
