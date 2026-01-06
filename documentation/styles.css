@@ -1,1 +1,476 @@
+/* Styles spécifiques pour la page d'installation */
 
+.step-number {
+    background: var(--primary);
+    color: var(--foreground);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.code-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px 50px 12px 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 1px solid var(--card-border);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--primary);
+    overflow-x: auto;
+    position: relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.code-box code {
+    display: block;
+    line-height: 1.8;
+    word-break: break-all;
+    padding-right: 10px;
+}
+
+.copy-button {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--btn-secondary-border);
+    color: var(--foreground);
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: background 0.2s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.copy-button:hover {
+    background: var(--btn-secondary-hover-bg);
+}
+
+.badge.success {
+    background-color: rgba(88, 99, 248, 0.2);
+    border-color: var(--primary);
+}
+
+.badge.success p {
+    color: var(--primary);
+}
+
+.badge.success svg.icon {
+    color: var(--primary);
+}
+
+/* Ajustements pour les cartes de la page setup */
+section.features-section .card {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.features-section .card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+section.features-section .card p.gray.mid {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+section.features-section .card a {
+    width: 100%;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+section.features-section .card button {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0;
+}
+
+section.features-section .card strong {
+    color: var(--foreground);
+    font-weight: 500;
+}
+
+section.features-section .card em {
+    color: var(--txt-secondary);
+    font-style: italic;
+}
+
+section.features-section .card br {
+    line-height: 1.8;
+}
+
+section.features-section .features-card-header {
+    margin-bottom: 12px;
+}
+
+/* Espacement spécifique pour le code-box */
+section.features-section .card .code-box {
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .code-box {
+        font-size: 11px;
+        padding: 10px 45px 10px 10px;
+    }
+    
+    .copy-button {
+        font-size: 10px;
+        padding: 4px 8px;
+        right: 6px;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    section.features-section .card {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .code-box {
+        padding: 10px 40px 10px 8px;
+        font-size: 10px;
+    }
+    
+    .copy-button {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+}/* Styles spécifiques pour la page d'installation */
+
+.step-number {
+    background: var(--primary);
+    color: var(--foreground);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.code-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 1px solid var(--card-border);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--primary);
+    overflow-x: auto;
+    position: relative;
+    word-break: break-all;
+}
+
+.code-box code {
+    display: block;
+    line-height: 1.6;
+}
+
+.copy-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--btn-secondary-border);
+    color: var(--foreground);
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: background 0.2s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+.copy-button:hover {
+    background: var(--btn-secondary-hover-bg);
+}
+
+.badge.success {
+    background-color: rgba(88, 99, 248, 0.2);
+    border-color: var(--primary);
+}
+
+.badge.success p {
+    color: var(--primary);
+}
+
+.badge.success svg.icon {
+    color: var(--primary);
+}
+
+/* Ajustements pour les cartes de la page setup */
+section.features-section .card {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.features-section .card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+section.features-section .card p.gray.mid {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+section.features-section .card a {
+    width: 100%;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+section.features-section .card button {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0;
+}
+
+section.features-section .card strong {
+    color: var(--foreground);
+    font-weight: 500;
+}
+
+section.features-section .card em {
+    color: var(--txt-secondary);
+    font-style: italic;
+}
+
+section.features-section .card br {
+    line-height: 1.8;
+}
+
+section.features-section .features-card-header {
+    margin-bottom: 12px;
+}
+
+/* Espacement spécifique pour le code-box */
+section.features-section .card .code-box {
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .code-box {
+        font-size: 11px;
+        padding: 10px;
+    }
+    
+    .copy-button {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    section.features-section .card {
+        min-height: auto;
+    }
+}/* Styles spécifiques pour la page d'installation */
+
+.step-number {
+    background: var(--primary);
+    color: var(--foreground);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.code-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 1px solid var(--card-border);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--primary);
+    overflow-x: auto;
+    position: relative;
+    word-break: break-all;
+}
+
+.code-box code {
+    display: block;
+    line-height: 1.6;
+}
+
+.copy-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--btn-secondary-border);
+    color: var(--foreground);
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: background 0.2s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+.copy-button:hover {
+    background: var(--btn-secondary-hover-bg);
+}
+
+.badge.success {
+    background-color: rgba(88, 99, 248, 0.2);
+    border-color: var(--primary);
+}
+
+.badge.success p {
+    color: var(--primary);
+}
+
+.badge.success svg.icon {
+    color: var(--primary);
+}
+
+/* Ajustements pour les cartes de la page setup */
+section.features-section .card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+section.features-section .card a {
+    width: 100%;
+    text-decoration: none;
+}
+
+section.features-section .card button {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+section.features-section .card strong {
+    color: var(--foreground);
+    font-weight: 500;
+}
+
+section.features-section .card em {
+    color: var(--txt-secondary);
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .code-box {
+        font-size: 11px;
+        padding: 10px;
+    }
+    
+    .copy-button {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+}/* Styles spécifiques pour la page d'installation */
+
+.step-number {
+    background: #ffffff;
+    color: #1a1a2e;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.code-box-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    border: 1px solid var(--card-border);
+    padding: 8px 12px;
+    overflow-x: auto;
+}
+
+.code-box {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px 80px 12px 15px; /* laisse de l’espace pour le bouton */
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #00ff88;
+    overflow-x: auto;
+    word-break: break-all;
+}
+
+.copy-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .code-box-wrapper {
+        padding: 6px 8px;
+    }
+
+    .code-box {
+        font-size: 10px;
+    }
+}
