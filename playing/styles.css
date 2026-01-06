@@ -1,0 +1,148 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #1a1a2e;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.controls-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.microbit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.microbit-label {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    font-family: sans-serif;
+}
+
+.controls-container {
+    display: flex;
+    gap: 40px;
+}
+
+.control-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.control-card:hover {
+    transform: scale(1.05);
+}
+
+.control-card:active {
+    transform: scale(0.95);
+}
+
+.icon-frame {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.icon-frame:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-frame svg {
+    color: #ffffff;
+}
+
+.control-card p {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Animation pour les boutons du micro:bit */
+.button-highlight {
+    animation: buttonFlash 0.5s ease-in-out;
+}
+
+@keyframes buttonFlash {
+    0%, 100% { fill: transparent; }
+    50% { fill: rgba(255, 255, 255, 0.5); }
+}
+
+.instructions-section {
+    margin-top: 40px;
+    max-width: 500px;
+    text-align: left;
+    color: #ffffff; /* texte blanc */
+    font-family: sans-serif;
+}
+
+.instructions-section h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.instructions-section ol {
+    padding-left: 20px;
+}
+
+.instructions-section li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Animation micro:bit USB */
+.usb-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.usb-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #00ff00; /* vert connecté */
+    animation: usbPulse 1s infinite alternate;
+}
+
+@keyframes usbPulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.4); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.6; }
+}
