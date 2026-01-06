@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <section class="controls-section">
+                <div class="controls-wrapper">
+
+                    <!-- MICRO:BIT -->
+                    <div class="microbit">
+                        <svg viewBox="0 0 220 140" width="220" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                            <!-- Board -->
+                            <rect x="5" y="5" width="210" height="130" rx="20"
+                                stroke="white" stroke-width="3" fill="transparent"/>
+
+                            <!-- LED matrix 5x5 - Parfaitement centré avec animation voiture -->
+                            <g>
+                                <!-- Row 1 - LEDs éteintes -->
+                                <circle cx="70" cy="50" r="4" fill="#333"/>
+                                <circle cx="90" cy="50" r="4" fill="#333"/>
+                                <circle cx="110" cy="50" r="4" fill="#333"/>
+                                <circle cx="130" cy="50" r="4" fill="#333"/>
+                                <circle cx="150" cy="50" r="4" fill="#333"/>
+
+                                <!-- Row 2 - Toit de la voiture -->
+                                <circle cx="70" cy="65" r="4" fill="#333"/>
+                                <circle cx="90" cy="65" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="110" cy="65" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="130" cy="65" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="150" cy="65" r="4" fill="#333"/>
+
+                                <!-- Row 3 - Corps de la voiture -->
+                                <circle cx="70" cy="80" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="90" cy="80" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="110" cy="80" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="130" cy="80" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="150" cy="80" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+
+                                <!-- Row 4 - Base de la voiture -->
+                                <circle cx="70" cy="95" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="90" cy="95" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="110" cy="95" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="130" cy="95" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="150" cy="95" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+
+                                <!-- Row 5 - Roues -->
+                                <circle cx="70" cy="110" r="4" fill="#333"/>
+                                <circle cx="90" cy="110" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="110" cy="110" r="4" fill="#333"/>
+                                <circle cx="130" cy="110" r="4" fill="white" class="car-led">
+                                    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="150" cy="110" r="4" fill="#333"/>
+                            </g>
+
+                            <!-- Button A -->
+                            <circle id="button-a" cx="30" cy="70" r="15" stroke="white" stroke-width="2" fill="transparent"/>
+                            <text x="30" y="75" text-anchor="middle" fill="white" font-size="14" font-family="sans-serif" font-weight="bold" style="pointer-events: none;">A</text>
+
+                            <!-- Button B -->
+                            <circle id="button-b" cx="190" cy="70" r="15" stroke="white" stroke-width="2" fill="transparent"/>
+                            <text x="190" y="75" text-anchor="middle" fill="white" font-size="14" font-family="sans-serif" font-weight="bold" style="pointer-events: none;">B</text>
+
+                        </svg>
+
+                        <!-- Texte Micro:Bit -->
+                        <p class="microbit-label">micro:bit</p>
+                    </div>
+
+                    <!-- FLÈCHES -->
+                    <div class="controls-container">
+
+                        <div id="left-arrow" class="control-card">
+                            <div class="icon-frame">
+                                <svg viewBox="0 0 24 24" width="40" height="40" fill="none">
+                                    <path d="M15 5L8 12L15 19"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p>"A" Turn left</p>
+                        </div>
+
+                        <div id="right-arrow" class="control-card">
+                            <div class="icon-frame">
+                                <svg viewBox="0 0 24 24" width="40" height="40" fill="none">
+                                    <path d="M9 5L16 12L9 19"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p>"B" Turn right</p>
+                        </div>
+
+                    </div>
+
+                    <!-- INSTRUCTIONS DÉTAILLÉES -->
+                    <div class="instructions-section">
+                        <h2>Detailed instructions</h2>
+                        <ol>
+                            <li>Connect your micro:bit to your computer or device.</li>
+                            <li>Open the game or program.</li>
+                            <li>Press <strong>A</strong> to turn left.</li>
+                            <li>Press <strong>B</strong> to turn right.</li>
+                            <li>Watch the LED matrix animate as you control the car!</li>
+                        </ol>
+                        <div class="usb-indicator">
+                            <div class="usb-dot"></div>
+                            <span>Connect your Micro:bit via USB</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+    </main>
+
+    <!-- Script pour l'animation des boutons -->
+    <script src="script.js"></script>
+</body>
+</html>
