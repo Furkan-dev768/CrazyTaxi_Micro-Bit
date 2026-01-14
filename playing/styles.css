@@ -40,6 +40,14 @@ main {
     font-family: sans-serif;
 }
 
+.video-section {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    font-family: sans-serif;
+}
+
 .controls-container {
     display: flex;
     gap: 40px;
