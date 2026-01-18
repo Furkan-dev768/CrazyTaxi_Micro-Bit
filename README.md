@@ -205,9 +205,4 @@ Pour toute question ou suggestion :
 
 ---
 
-<div align="center">
-
 **Fait avec ❤️ par l'équipe Crazy Taxi**
-[⬆ Retour en haut](#-crazy-taxi-mirobit)
-
-</div>
