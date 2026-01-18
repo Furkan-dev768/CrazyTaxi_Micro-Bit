@@ -128,7 +128,7 @@ CrazyTaxi_Micro-Bit/
 |   └── Crazy_Taxi-Logo.png
 │
 ├── docs/                      # Documentation technique
-│   └── rapport-de-test.pdf     # Rapport de tests détaillé
+│   └── tests_effectués.pdf     # Rapport de tests détaillé
 │
 └── releases/                  # Fichiers compilés
     └── CrazyTaxi_MicroBit.ino
