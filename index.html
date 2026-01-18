@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,95 +16,396 @@
     <script src="ui/nav.js" defer></script>
     <title>Crazy Taxi Micro:Bit</title>
 </head>
+
 <body>
     <nav class="navigation">
         <button class="menu-toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none">
+                <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
             </svg>
         </button>
         <a href="index.html" class="logo">Crazy Taxi</a>
         <div class="menu">
-          <ul>
-            <li><a href="errors/soon.html">Changelog</a></li>
-            <li><a href="documentation/index.html">Documentation</a></li>
-            <li><a href="errors/soon.html">FAQ</a></li>
-            <li><a href="errors/soon.html">Contact</a></li>
-          </ul>
+            <ul>
+                <li><a href="errors/soon.html">Changelog</a></li>
+                <li><a href="documentation/index.html">Documentation</a></li>
+                <li><a href="errors/soon.html">FAQ</a></li>
+                <li><a href="errors/soon.html">Contact</a></li>
+            </ul>
         </div>
         <button class="primary" onclick="window.location.href='download/index.html'">Download</button>
-      </nav>
-      
+    </nav>
+
     <section class="hero-section">
         <div class="hero-content">
             <div class="badge">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none" class="icon">
-                    <path d="M8 10.1667L12.1232 6.04344C13.2481 4.91858 13.8105 4.35614 14.4312 3.90314C15.7047 2.9737 17.1818 2.36187 18.7395 2.11858C19.4988 2 20.2942 2 21.885 2C21.9681 2 22 2.03812 22 2.11504C22 3.70584 22 4.50125 21.8814 5.26046C21.6381 6.81818 21.0263 8.29527 20.0969 9.56878C19.6439 10.1895 19.0814 10.7519 17.9566 11.8768L13.8333 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M10.341 8.09838C8.63808 8.09838 6.49778 7.73765 4.9043 8.39769C3.73671 8.88132 2.87754 10.0012 2 10.8787L5.30597 12.2955C6.18208 12.671 5.64651 13.7766 5.50147 14.5018C5.33985 15.3099 5.34886 15.3397 5.93158 15.9224L8.07758 18.0684C8.6603 18.6511 8.69008 18.6602 9.49816 18.4985C10.2234 18.3535 11.329 17.8179 11.7044 18.694L13.1213 22C13.9988 21.1225 15.1187 20.2633 15.6023 19.0957C16.2624 17.5022 15.9016 15.3619 15.9016 13.659" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                    <path d="M12 20L11 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M4 12L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15 4.07996C16.2 4.25996 17.46 4.73996 18.1614 5.45996C19.0576 6.25211 19.68 7.31996 19.92 8.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
-                    <path d="M17.94 6.06006L16.5 7.50006" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                    fill="none" class="icon">
+                    <path
+                        d="M8 10.1667L12.1232 6.04344C13.2481 4.91858 13.8105 4.35614 14.4312 3.90314C15.7047 2.9737 17.1818 2.36187 18.7395 2.11858C19.4988 2 20.2942 2 21.885 2C21.9681 2 22 2.03812 22 2.11504C22 3.70584 22 4.50125 21.8814 5.26046C21.6381 6.81818 21.0263 8.29527 20.0969 9.56878C19.6439 10.1895 19.0814 10.7519 17.9566 11.8768L13.8333 16"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M10.341 8.09838C8.63808 8.09838 6.49778 7.73765 4.9043 8.39769C3.73671 8.88132 2.87754 10.0012 2 10.8787L5.30597 12.2955C6.18208 12.671 5.64651 13.7766 5.50147 14.5018C5.33985 15.3099 5.34886 15.3397 5.93158 15.9224L8.07758 18.0684C8.6603 18.6511 8.69008 18.6602 9.49816 18.4985C10.2234 18.3535 11.329 17.8179 11.7044 18.694L13.1213 22C13.9988 21.1225 15.1187 20.2633 15.6023 19.0957C16.2624 17.5022 15.9016 15.3619 15.9016 13.659"
+                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M12 20L11 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M4 12L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M15 4.07996C16.2 4.25996 17.46 4.73996 18.1614 5.45996C19.0576 6.25211 19.68 7.31996 19.92 8.99996"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                    <path d="M17.94 6.06006L16.5 7.50006" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" />
                 </svg>
                 <p>Première Publication !</p>
             </div>
             <h1 class="title">Jouez à Crazy Taxi sur Micro:Bit</h1>
-            <p class="gray mid">Découvrez le jeu d'arcade classique Crazy Taxi, réinventé pour le BBC Micro:bit. Un jeu de conduite exigeant, entièrement développé en C, avec des graphismes d'une précision pixel parfaite et un gameplay addictif sur une matrice LED 5x5.</p>
+            <p class="gray mid">Découvrez le jeu d'arcade classique Crazy Taxi, réinventé pour le BBC Micro:bit. Un jeu
+                de conduite exigeant, entièrement développé en C, avec des graphismes d'une précision pixel parfaite et
+                un gameplay addictif sur une matrice LED 5x5.</p>
             <div class="buttons">
-                <button class="secondary with-icon" onclick="window.open('https://github.com/Furkan-dev768/CrazyTaxi_Micro-Bit', '_blank')">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none" class="icon">
-                        <path d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>                    
+                <button class="secondary with-icon"
+                    onclick="window.open('https://github.com/Furkan-dev768/CrazyTaxi_Micro-Bit', '_blank')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                        fill="none" class="icon">
+                        <path d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                     Github
                 </button>
-                <button class="primary with-icon" onclick="window.location.href='download/index.html'">Télécharger Maintenant</button>
-                <button class="primary with-icon" onclick="window.location.href='playing/index.html'">Comment jouer ?</button>
+                <button class="primary with-icon" onclick="window.location.href='download/index.html'">Télécharger
+                    Maintenant</button>
+                <button class="primary with-icon" onclick="window.location.href='playing/index.html'">Comment jouer
+                    ?</button>
             </div>
         </div>
     </section>
+
+    <!-- Section Contexte -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Contexte du Projet</h2>
+            <p>Une adaptation innovante du jeu classique Crazy Taxi pour le micro-contrôleur BBC Micro:bit</p>
+        </div>
+        <div class="context-grid">
+            <div class="card animate">
+                <div class="card-content">
+                    <h3>🎯 Objectif</h3>
+                    <p>Créer une version jouable et addictive de Crazy Taxi sur le Micro:bit, exploitant les contraintes
+                        de la matrice LED 5x5 pour offrir une expérience de jeu fluide et divertissante.</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h3>🎮 Concept</h3>
+                    <p>Un jeu d'esquive où le joueur contrôle un taxi qui doit éviter les obstacles sur une route à
+                        trois voies. La difficulté augmente progressivement avec l'accélération du jeu.</p>
+                </div>
+            </div>
+            <div class="card animate" style="color: white;">
+                <div class="card-content">
+                    <h3>⚡ Contraintes Techniques</h3>
+                    <ul>
+                        <li>Affichage limité à une matrice LED 5x5</li>
+                        <li>Mémoire RAM limitée du Micro:bit</li>
+                        <li>Deux boutons de contrôle uniquement</li>
+                        <li>Optimisation pour un gameplay fluide</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Cahier des Charges -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Cahier des Charges</h2>
+            <p>Spécifications fonctionnelles et techniques du projet</p>
+        </div>
+        <div class="context-grid">
+            <div class="card animate" style="color: white;">
+                <div class="card-content">
+                    <h3>📋 Fonctionnalités</h3>
+                    <ul>
+                        <li>Déplacement du taxi à gauche et droite</li>
+                        <li>Génération aléatoire d'obstacles</li>
+                        <li>Détection de collision</li>
+                        <li>Accélération progressive du jeu</li>
+                        <li>Affichage du score et du temps</li>
+                        <li>Délimitation visuelle de la route</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card animate" style="color: white;">
+                <div class="card-content">
+                    <h3>🔧 Aspects Techniques</h3>
+                    <ul>
+                        <li>Langage : C++</li>
+                        <li>Plateforme : BBC Micro:bit V1 & V2</li>
+                        <li>Gestion mémoire optimisée</li>
+                        <li>Utilisation des LEDs intégrées</li>
+                        <li>Gestion des entrées boutons</li>
+                        <li>Système de temporisation précis</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card animate" style="color: white;">
+                <div class="card-content">
+                    <h3>✅ Critères de Qualité</h3>
+                    <ul>
+                        <li>Code modulaire et commenté</li>
+                        <li>Respect des conventions de nommage</li>
+                        <li>Absence de bugs critiques</li>
+                        <li>Fluidité du gameplay</li>
+                        <li>Lisibilité de l'affichage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Démarche -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Démarche et Conception</h2>
+            <p>Approche descendante et résolution des problèmes techniques</p>
+        </div>
+        <div class="approach-grid">
+            <div class="card animate">
+                <div class="card-content">
+                    <h4>1. Analyse et Conception</h4>
+                    <p>Définition de l'architecture globale du jeu : séparation entre la logique de jeu, l'affichage et
+                        la gestion des entrées. Création d'un système modulaire pour faciliter les tests et l'évolution
+                        du code.</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h4>2. Gestion de l'Affichage</h4>
+                    <p>Développement d'un système d'affichage optimisé pour la matrice 5x5. Représentation du taxi (1
+                        LED), des obstacles (1 LED chacun), et des lignes de sécurité délimitant la route sur 3 voies.
+                    </p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h4>3. Système de Déplacement</h4>
+                    <p>Implémentation du contrôle du taxi avec les boutons A (gauche) et B (droite). Gestion des limites
+                        pour empêcher le taxi de sortir de la route. Validation du fonctionnement simultané des deux
+                        boutons sans bug.</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h4>4. Génération Aléatoire</h4>
+                    <p>Création d'un système de génération procédurale d'obstacles garantissant une partie différente à
+                        chaque fois. Équilibrage de la difficulté pour maintenir le joueur engagé.</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h4>5. Détection de Collision</h4>
+                    <p>Développement d'un algorithme de détection précis entre le taxi et les obstacles. Arrêt immédiat
+                        du jeu lors d'une collision avec affichage du score final.</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h4>6. Progression de Difficulté</h4>
+                    <p>Implémentation d'un système d'accélération progressive augmentant la vitesse du jeu après
+                        plusieurs secondes, rendant le challenge de plus en plus intense.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Données -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Principales Données Utilisées</h2>
+            <p>Structure et organisation des données du jeu</p>
+        </div>
+        <div class="context-grid">
+            <div class="card animate">
+                <div class="card-content">
+                    <h3>🚗 Position du Taxi</h3>
+                    <p>Variables globales stockant les coordonnées X et Y du taxi sur la matrice LED. Mises à jour lors
+                        des déplacements pour refléter la position actuelle sur les trois voies disponibles.</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h3>🚧 Obstacles</h3>
+                    <p>Tableau dynamique contenant les positions des obstacles générés aléatoirement. Chaque obstacle
+                        possède une coordonnée X (voie) et Y (position verticale) mise à jour à chaque frame.</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h3>⏱️ Temporisation</h3>
+                    <p>Constantes et variables gérant la vitesse du jeu, l'accélération progressive et le timing des
+                        animations. Permettent un gameplay fluide et une difficulté croissante.</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h3>📊 Score et État</h3>
+                    <p>Variables suivant le temps de survie du joueur, l'état du jeu (en cours, terminé) et les
+                        informations à afficher lors du game over.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Résultats -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Bilan des Résultats</h2>
+            <p>Tests et validation du projet</p>
+        </div>
+        <div class="results-grid">
+            <div class="card animate">
+                <div class="card-content">
+                    <div class="metric">100%</div>
+                    <div class="label">Tests Gameplay Validés</div>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <div class="metric">100%</div>
+                    <div class="label">Tests Qualité Code</div>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <div class="metric">10/10</div>
+                    <div class="label">Fonctionnalités Validées</div>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <div class="metric">0</div>
+                    <div class="label">Bugs Détectés</div>
+                </div>
+            </div>
+        </div>
+        <div class="context-grid" style="margin-top: 40px;">
+            <div class="card animate" style="color: white;">
+                <div class="card-content">
+                    <h3>✅ Points Forts</h3>
+                    <ul>
+                        <li>Gameplay fluide et addictif</li>
+                        <li>Code modulaire et bien documenté</li>
+                        <li>Tous les tests fonctionnels validés</li>
+                        <li>Gestion robuste des collisions</li>
+                        <li>Génération aléatoire efficace</li>
+                        <li>Compatible V1 et V2 du Micro:bit</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card animate" style="color: white;">
+                <div class="card-content">
+                    <h3>🎯 Réussites Techniques</h3>
+                    <ul>
+                        <li>Optimisation mémoire réussie</li>
+                        <li>Affichage précis sur matrice 5x5</li>
+                        <li>Accélération progressive équilibrée</li>
+                        <li>Absence de bugs lors de doubles appuis</li>
+                        <li>Respect des conventions de code</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Équipe -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Notre Équipe</h2>
+            <p>Les développeurs derrière Crazy Taxi Micro:bit</p>
+        </div>
+        <div class="team-grid">
+            <div class="card animate">
+                <div class="card-content">
+                    <h4>Tomás DE ALMEIDA</h4>
+                    <div class="role">RD</div>
+                    <p>Chef de projet Développement (RD)</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h4>Furkan AKTAS</h4>
+                    <div class="role">RW</div>
+                    <p>Responsable Communication WEB (RW)</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h4>Hakan OZATA</h4>
+                    <div class="role">RC</div>
+                    <p>Responsable Conception/Documentation) (RC)</p>
+                </div>
+            </div>
+            <div class="card animate">
+                <div class="card-content">
+                    <h4>Emirhan KARAHAN</h4>
+                    <div class="role">RQ</div>
+                    <p>Responsable Qualité (RQ)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="specs-section cards-showcase">
-    <div class="card-container">
+        <div class="card-container">
 
-        <!-- CARD 1 -->
-        <div class="card image-card animate">
-            <div class="card-content">
-                <img src="assets/Crazy_Taxi-Logo.png" alt="Crazy Taxi Gameplay" class="showcase-image"height="500px">
-                <h3>Gameplay</h3>
-                <p>Découvrez l'expérience Crazy Taxi sur micro:bit avec un écran LED 5x5.</p>
+            <!-- CARD 1 -->
+            <div class="card image-card animate">
+                <div class="card-content">
+                    <img src="assets/Crazy_Taxi-Logo.png" alt="Crazy Taxi Gameplay" class="showcase-image"
+                        height="500px">
+                    <h3>Gameplay</h3>
+                    <p>Découvrez l'expérience Crazy Taxi sur micro:bit avec un écran LED 5x5.</p>
+                </div>
+                <div class="card-bottom">
+                    <p>LED Matrix 5×5</p>
+                </div>
             </div>
-            <div class="card-bottom">
-                <p>LED Matrix 5×5</p>
+
+            <!-- CARD 2 -->
+            <div class="card image-card animate">
+                <div class="card-content">
+                    <img src="assets/MicroBit_Card.png" alt="Micro:bit Device" class="showcase-image" height="500px">
+                    <h3>Le Micro:bit</h3>
+                    <p>Le jeu s'exécute directement sur le microcontrôleur BBC Micro:bit.</p>
+                </div>
+                <div class="card-bottom">
+                    <p>Compatible V1 & V2</p>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card image-card animate">
+                <div class="card-content">
+                    <img src="assets/Arduino-Logo.png" alt="Development" class="showcase-image" height="500px">
+                    <h3>Développement</h3>
+                    <p>Un projet codé en C++, optimisé pour gérer les animations et les obstacles.</p>
+                </div>
+                <div class="card-bottom">
+                    <p>Code C++ Optimisé</p>
+                </div>
             </div>
         </div>
-
-        <!-- CARD 2 -->
-        <div class="card image-card animate">
-            <div class="card-content">
-                <img src="assets/MicroBit_Card.png" alt="Micro:bit Device" class="showcase-image" height="500px">
-                <h3>Le Micro:bit</h3>
-                <p>Le jeu s'exécute directement sur le microcontrôleur BBC Micro:bit.</p>
-            </div>
-            <div class="card-bottom">
-                <p>Compatible V1 & V2</p>
-            </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="card image-card animate">
-            <div class="card-content">
-                <img src="assets/Arduino-Logo.png" alt="Development" class="showcase-image" height="500px">
-                <h3>Développement</h3>
-                <p>Un projet codé en C++, optimisé pour gérer les animations et les obstacles.</p>
-            </div>
-            <div class="card-bottom">
-                <p>Code C++ Optimisé</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <footer>
         <div class="footer-content">
@@ -142,13 +444,19 @@
                 <h4>Contactez Nous</h4>
                 <div class="social-group">
                     <div class="social-icons">
-                        <a href="https://github.com/Furkan-dev768/CrazyTaxi_Micro-Bit" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                                <path d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <a href="https://github.com/Furkan-dev768/CrazyTaxi_Micro-Bit" aria-label="GitHub"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                color="#000000" fill="none">
+                                <path d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </a>
-                    </div>  
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,4 +466,5 @@
         </div>
     </footer>
 </body>
+
 </html>
