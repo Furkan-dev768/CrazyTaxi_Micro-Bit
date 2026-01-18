@@ -48,11 +48,21 @@
 
 ## 📥 Installation
 
-### Téléchargement direct du fichier .ino
+### Méthode 1 : Téléchargement direct du fichier .hex (Recommandé)
 
-### Étape 1. Téléchargez le fichier `crazy-taxi.hex` depuis la [page des releases](https://github.com/Furkan-dev768/CrazyTaxi_Micro-Bit/releases)
+#### Étape 1 : Téléchargez le fichier
+Téléchargez le fichier `crazy-taxi.hex` depuis la [page des releases](https://github.com/Furkan-dev768/CrazyTaxi_Micro-Bit/releases)
 
-### Étape 2 : Installation avec Arduino IDE
+#### Étape 2 : Transférez sur le Micro:bit
+1. Connectez votre Micro:bit via USB à votre ordinateur
+2. Le Micro:bit apparaîtra comme un lecteur USB nommé **MICROBIT**
+3. Glissez-déposez le fichier `crazy-taxi.hex` sur ce lecteur
+4. La LED jaune au dos du Micro:bit clignotera pendant le transfert
+5. Une fois terminé, le jeu se lance automatiquement ! 🎮
+
+---
+
+### Méthode 2 : Compilation avec Arduino IDE
 
 #### 2.1 Télécharger Arduino IDE
 
@@ -76,8 +86,8 @@ Téléchargez et installez la dernière version de l'environnement de développe
 #### 2.4 Sélectionner la carte
 
 1. Ouvrez le fichier `CrazyTaxi_MicroBit.ino` dans Arduino IDE
-2. Allez dans **Outils → Type de carte → Nordic Semiconductor nRF5 Boards → BBC micro:bit V2**
-3. Assurez-vous de bien sélectionner la version **V2**
+2. Allez dans **Outils → Type de carte → Nordic Semiconductor nRF5 Boards**
+3. Sélectionnez **BBC micro:bit** (V1) ou **BBC micro:bit V2** selon votre modèle
 
 #### 2.5 Choisir le port
 
@@ -92,7 +102,6 @@ Téléchargez et installez la dernière version de l'environnement de développe
 1. Cliquez sur le bouton **Téléverser** (→) pour compiler et envoyer le programme
 2. Le premier téléversement peut prendre quelques minutes
 3. Une fois terminé, le jeu se lance automatiquement sur votre micro:bit ! 🎮
-
 
 ---
 
@@ -123,13 +132,32 @@ Téléchargez et installez la dernière version de l'environnement de développe
 
 ## 🏗️ Architecture technique
 
+### Structure du projet
+
+```
+CrazyTaxi_Micro-Bit/
+│
+├── README.md                  # Documentation du projet
+│
+├── assets/                    # Ressources graphiques
+│   └── CrazyTaxi_MicroBit.ino    # Code source principal
+|   └── Crazy_Taxi-Logo.png
+│
+├── docs/                      # Documentation technique
+│   └── rapport-de-test.md     # Rapport de tests détaillé
+│
+└── releases/                  # Fichiers compilés
+    └── CrazyTaxi_MicroBit.ino
 ```
 
 ### Technologies utilisées
 
 - **Langage** : C++
 - **Plateforme** : BBC Micro:bit (ARM Cortex-M0/M4)
-- **Outils** : Arduino IDE
+- **Microcontrôleur** : Nordic nRF51822 (V1) / nRF52833 (V2)
+- **Outils** : Arduino IDE avec support nRF5
+- **Affichage** : Matrice LED 5×5 pixels
+- **Mémoire** : 16KB RAM (V1) / 128KB RAM (V2)
 
 ---
 
@@ -160,7 +188,7 @@ Le projet a été rigoureusement testé selon un protocole complet :
 
 **Résultat** : **0 bug détecté** lors des tests finaux ! 🎉
 
-Pour plus de détails, consultez le [rapport de test complet](docs/rapport-de-test.pdf).
+Pour plus de détails, consultez le [rapport de test complet](docs/rapport-de-test.md).
 
 ---
 
@@ -189,18 +217,11 @@ Les contributions sont les bienvenues ! Si vous souhaitez améliorer le jeu :
 
 ---
 
-## 📄 Licence
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
----
-
 ## 📞 Contact
 
 Pour toute question ou suggestion :
 
 - 🐛 Ouvrez une [issue](https://github.com/Furkan-dev768/CrazyTaxi_Micro-Bit/issues)
-- 📧 Contactez-nous via le [site web](https://furkan-dev768.github.io/CrazyTaxi_Micro-Bit/)
 - ⭐ N'oubliez pas de mettre une étoile si vous aimez le projet !
 
 ---
