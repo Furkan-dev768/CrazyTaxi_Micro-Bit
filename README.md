@@ -128,7 +128,7 @@ CrazyTaxi_Micro-Bit/
 |   └── Crazy_Taxi-Logo.png
 │
 ├── docs/                      # Documentation technique
-│   └── rapport-de-test.md     # Rapport de tests détaillé
+│   └── rapport-de-test.pdf     # Rapport de tests détaillé
 │
 └── releases/                  # Fichiers compilés
     └── CrazyTaxi_MicroBit.ino
@@ -172,7 +172,7 @@ Le projet a été rigoureusement testé selon un protocole complet :
 
 **Résultat** : **0 bug détecté** lors des tests finaux ! 🎉
 
-Pour plus de détails, consultez le [rapport de test complet](docs/rapport-de-test.md).
+Pour plus de détails, consultez le [rapport de test complet](docs/rapport-de-test.pdf).
 
 ---
 
