@@ -260,7 +260,8 @@ section.specs-section .card-content .disk-speed-info {
     margin-bottom: 10px;
 }
 
-.label, .value {
+.label,
+.value {
     font-size: 12px;
     font-weight: 300;
     color: white;
@@ -308,18 +309,128 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
     flex-direction: column;
 }
 
+/* Styles supplémentaires pour les nouvelles sections */
+.content-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #888;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.context-grid,
+.approach-grid,
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card .card-content h3,
+.card .card-content h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card .card-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card .card-content ul li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.card .card-content ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: white;
+}
+
+.card .card-content .role {
+    font-size: 12px;
+    color: white;
+    background: var(--primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.card .card-content .metric {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.card .card-content .label {
+    font-size: 13px;
+    font-weight: 300;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        padding: 50px 15px;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .context-grid,
+    .approach-grid,
+    .team-grid,
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 1024px) {
     section.specs-section .card-container {
         flex-wrap: wrap;
         padding: 20px;
         box-sizing: border-box;
     }
-    
+
     section.specs-section .card-container .card {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-    
+
     section.specs-section {
         height: auto;
         min-height: 100vh;
@@ -331,12 +442,12 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
         flex-direction: column;
         align-items: center;
     }
-    
+
     section.specs-section .card-container .card {
         width: 100%;
         max-width: 300px;
     }
-    
+
     section.specs-section .card-content .disk-speed-info {
         flex-direction: column;
         gap: 5px;
@@ -347,11 +458,11 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
     section.specs-section .card-container {
         padding: 10px;
     }
-    
+
     section.specs-section .card-bottom {
         padding: 8px;
     }
-    
+
     section.specs-section .card-bottom p {
         font-size: 11px;
     }
@@ -361,12 +472,12 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
     section.features-section .content {
         width: 90%;
     }
-    
+
     section.features-section .cards {
         flex-wrap: wrap;
         gap: 20px;
     }
-    
+
     section.features-section .card {
         width: calc(50% - 10px);
         min-width: 0;
@@ -377,16 +488,16 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
     section.features-section {
         padding: 30px 0;
     }
-    
+
     section.features-section .content {
         width: 95%;
     }
-    
+
     section.features-section .cards {
         flex-direction: column;
         align-items: center;
     }
-    
+
     section.features-section .card {
         max-width: 80%;
         width: 80%;
@@ -397,16 +508,16 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
     section.features-section {
         padding: 20px 0;
     }
-    
+
     section.features-section .content {
         width: 100%;
         padding: 0 15px;
     }
-    
+
     section.features-section .description {
         width: 100%;
     }
-    
+
     section.features-section .card {
         padding: 15px;
     }
@@ -416,36 +527,36 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
     section.features-section {
         padding: 15px 0;
     }
-    
+
     section.features-section .card {
         padding: 12px;
     }
-    
+
     section.features-section h2.title {
         font-size: 18px;
         margin-bottom: 8px;
     }
-    
+
     section.features-section .description {
         font-size: 13px;
         line-height: 1.4;
     }
-    
+
     section.features-section .features-card-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
     }
-    
+
     section.features-section .features-card-header svg {
         width: 20px;
         height: 20px;
     }
-    
+
     section.features-section .features-card-header h3 {
         font-size: 15px;
     }
-    
+
     section.features-section .card p {
         font-size: 11px;
         line-height: 1.5;
@@ -457,15 +568,15 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
     section.features-section h2.title {
         font-size: 17px;
     }
-    
+
     section.features-section .features-card-header h3 {
         font-size: 14px;
     }
-    
+
     section.features-section .card p {
         font-size: 10px;
     }
-    
+
     section.features-section .card {
         padding: 10px;
     }
@@ -533,6 +644,7 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
         height: auto;
         min-height: 100vh;
     }
+
     .search-section .left-panel {
         width: 100%;
         min-height: unset;
@@ -543,6 +655,7 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
         flex-direction: column;
         order: 2;
     }
+
     .search-section .right-panel {
         width: 100%;
         min-height: unset;
@@ -553,6 +666,7 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
         flex-direction: column;
         order: 1;
     }
+
     .search-section .img-screen {
         margin: 20px auto;
         width: 80%;
@@ -564,12 +678,14 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
         flex-direction: column;
         height: auto;
     }
+
     .search-section .left-panel {
         width: 100%;
         margin: 10px 0;
         min-height: unset;
         order: 2;
     }
+
     .search-section .right-panel {
         width: 100%;
         margin: 10px 0 30px 0;
@@ -577,10 +693,12 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
         padding: 0 10px;
         order: 1;
     }
+
     .search-section .img-screen {
         width: 90%;
         margin: 15px auto;
     }
+
     .search-section .right-panel h1 {
         font-size: 1.3rem;
     }
@@ -590,26 +708,32 @@ section.specs-section .cpu-card .progress-bar-percentage-container {
     .search-section .left-panel {
         order: 2;
     }
+
     .search-section .right-panel {
         order: 1;
         padding: 0 5px;
     }
+
     .search-section .img-screen {
         width: 100%;
         margin: 10px 0;
         border-radius: 6px;
     }
+
     .search-section .img-screen img {
         width: 100%;
         margin: 10px auto;
     }
+
     .search-section .right-panel h1 {
         font-size: 1.1rem;
         margin-bottom: 10px;
     }
+
     .search-section .right-panel .badge {
         margin-bottom: 15px;
     }
+
     .search-section .right-panel p.description {
         font-size: 12px;
         margin-bottom: 15px;
