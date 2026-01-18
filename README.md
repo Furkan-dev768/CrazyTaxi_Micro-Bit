@@ -20,7 +20,6 @@
 ### ⚡ Contraintes techniques relevées
 
 - **Affichage limité** : Matrice LED 5x5 pixels
-- **Mémoire RAM** : Optimisation pour les ressources limitées du Micro:bit
 - **Contrôles** : Deux boutons uniquement (A et B)
 
 ---
