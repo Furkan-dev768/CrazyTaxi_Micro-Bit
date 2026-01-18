@@ -48,21 +48,7 @@
 
 ## 📥 Installation
 
-### Méthode 1 : Téléchargement direct du fichier .hex (Recommandé)
-
-#### Étape 1 : Téléchargez le fichier
-Téléchargez le fichier `crazy-taxi.hex` depuis la [page des releases](https://github.com/Furkan-dev768/CrazyTaxi_Micro-Bit/releases)
-
-#### Étape 2 : Transférez sur le Micro:bit
-1. Connectez votre Micro:bit via USB à votre ordinateur
-2. Le Micro:bit apparaîtra comme un lecteur USB nommé **MICROBIT**
-3. Glissez-déposez le fichier `crazy-taxi.hex` sur ce lecteur
-4. La LED jaune au dos du Micro:bit clignotera pendant le transfert
-5. Une fois terminé, le jeu se lance automatiquement ! 🎮
-
----
-
-### Méthode 2 : Compilation avec Arduino IDE
+### Méthode 1 : Compilation avec Arduino IDE
 
 #### 2.1 Télécharger Arduino IDE
 
