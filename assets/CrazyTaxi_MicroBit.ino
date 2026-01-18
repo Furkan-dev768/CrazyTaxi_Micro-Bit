@@ -7,7 +7,7 @@ Role: jeu "Crazy Taxi"
 #include <time.h>
 Adafruit_Microbit_Matrix microbit;
 
-//Initialisation des variables
+// Initialisation des variables
 
 const int buzzerPin=8;
 bool buttonA_last = false;
@@ -20,7 +20,7 @@ int alea;
 
 double t0, t1;
 
-// on initialise les deux boutons et la carte
+// On initialise les deux boutons et la carte
 
 void setup() {
 
@@ -47,7 +47,7 @@ void setup() {
     microbit.begin();
   randomSeed(millis());
 
-//On initialise l'aléatoire et le temps des boucles
+// On initialise l'aléatoire et le temps des boucles
 
   t0 = millis();
   t1 = millis();
@@ -64,48 +64,48 @@ void loop() {
   delay(500);
   noTone(buzzerPin);
 
-  // ARRIVER ALEATOIRE DES ENNEMIS
+  // ARRIVÉE ALEATOIRE DES ENNEMIS
 // Vitesse lente car on est en dessous des 15 secondes
 
   if (millis() - t1 < 15000) {
 
-// Si le temps est entre 150 et 450 ms, la LED sur la première ligne s'allume, colonne aléatoire.   
+// Si le temps varie entre 150 et 450 ms, la LED sur la première ligne s'allume, colonne aléatoire.   
 
     if (millis() - t0 > 150 && millis() - t0 < 450) {
       microbit.drawPixel(alea, 0, LED_ON);
       microbit.drawPixel(alea, 1, LED_OFF);
     }
 
-// Si le temps est entre 450 et 750 ms, la LED sur la deuxième ligne s'allume, meme colonne que la précedente.   
+// Si le temps varie entre 450 et 750 ms, la LED sur la deuxième ligne s'allume, meme colonne que la précedente.   
 
     if (millis() - t0 > 450 && millis() - t0 < 750) {
       microbit.drawPixel(alea, 0, LED_OFF);
       microbit.drawPixel(alea, 1, LED_ON);
     }
 
-// Si le temps est entre 750 et 1050 ms, la LED sur la troisième ligne s'allume, meme colonne que la précedente.
+// Si le temps varie entre 750 et 1050 ms, la LED sur la troisième ligne s'allume, meme colonne que la précedente.
 
     if (millis() - t0 > 750 && millis() - t0 < 1050) {
       microbit.drawPixel(alea, 1, LED_OFF);
       microbit.drawPixel(alea, 2, LED_ON);
     }
 
-// Si le temps est entre 1050 et 1350 ms, la LED sur la quatrième ligne s'allume, meme colonne que la précedente.
+// Si le temps varie entre 1050 et 1350 ms, la LED sur la quatrième ligne s'allume, meme colonne que la précedente.
 
     if (millis() - t0 > 1050 && millis() - t0 < 1350) {
       microbit.drawPixel(alea, 2, LED_OFF);
       microbit.drawPixel(alea, 3, LED_ON);
     }
 
-// Une fois qu'on a dépassé les 1350 ms la LED s'éteint pour pas intérferé avec la voiture et éviter les BUGS.
+// Une fois qu'on a dépassé les 1350 ms la LED s'éteint pour pas intérferer avec la voiture et éviter les BUGS.
 
     if (millis() - t0 > 1350) {
       microbit.drawPixel(alea, 3, LED_OFF);
     }
 
-    // COLLISIONS ET AFFICHAGE DES RESULTATS
+    // COLLISIONS ET AFFICHAGE DES RÉSULTATS
 
-// Une fois que la voiture touche un obstacle le jeu s'arrete et affiche le résultat converti en seconde.
+// Une fois que la voiture touche un obstacle le jeu s'arrête et affiche le résultat converti en seconde.
 
     if ((millis() - t0 > 1500) && (alea == pos)) {
       t1 = (millis() - t1) / 1000;
@@ -118,7 +118,7 @@ void loop() {
 
 // Vitesse moyenne entre 15 et 54 secondes
 
-// On fait la meme chose en rajoutant un deuxieme obstacle et en multipliant la vitesse par 2.
+// On fait la même chose en rajoutant un deuxieme obstacle et en multipliant la vitesse par 2.
 
   } else if (millis() - t1 < 54000) {
     if (millis() - t0 > 150 && millis() - t0 < 300) {
@@ -169,7 +169,7 @@ void loop() {
       microbit.drawPixel(alea2, 3, LED_OFF);
     }
 
-    // COLLISIONS ET AFFICHAGE DES RESULTATS
+    // COLLISIONS ET AFFICHAGE DES RÉSULTATS
 
     if ((millis() - t0 > 1500) && (alea2 == pos)) {
       t1 = (millis() - t1) / 1000;
@@ -190,7 +190,7 @@ void loop() {
     }
   }
 
-  // Vitesse au dessus des 54 secondes (vitesse X4).
+  // Vitesse au dessus des 54 secondes (vitesse x4).
 
   else {
     if (millis() - t0 > 75 && millis() - t0 < 150) {
@@ -331,12 +331,12 @@ void loop() {
     }
   }
 
-    // LIGNE DE SÉCURITÉ SUR LES COTÉS
+    // LIGNE DE SÉCURITÉ SUR LES CÔTÉS
   
 
   if (millis() - t0 > 300 && millis() - t0 < 600) {
 
-  // Ligne de sécurité a gauche
+  // Ligne de sécurité à gauche
 
     microbit.drawPixel(0, 0, LED_OFF);
     microbit.drawPixel(0, 1, LED_ON);
@@ -344,7 +344,7 @@ void loop() {
     microbit.drawPixel(0, 3, LED_ON);
     microbit.drawPixel(0, 4, LED_OFF);
 
-  // Ligne de sécurité a droite
+  // Ligne de sécurité à droite
 
     microbit.drawPixel(4, 0, LED_OFF);
     microbit.drawPixel(4, 1, LED_ON);
@@ -353,7 +353,7 @@ void loop() {
     microbit.drawPixel(4, 4, LED_OFF);
   }
 
-  // Décalage des lignes de sécurité toute les 300ms.
+  // Décalage des lignes de sécurité toutes les 300ms.
 
   if (millis() - t0 > 600 && millis() - t0 < 900) {
     microbit.drawPixel(0, 0, LED_OFF);
@@ -411,7 +411,7 @@ void loop() {
     microbit.drawPixel(4, 4, LED_OFF);
   }
 
-  // REINITIALISATION DE LA BOUCLE
+  // RÉINITIALISATION DE LA BOUCLE
 
   if (millis() - t0 > 1800) {
     t0 = millis();
@@ -419,7 +419,7 @@ void loop() {
     alea2 = random(1, 4);
   }
 
-  // DEPLACEMENT DU JOUEUR
+  // DÉPLACEMENT DU JOUEUR
 
   bool buttonA_now = digitalRead(button_A);
   bool buttonB_now = digitalRead(button_B);
@@ -434,7 +434,7 @@ void loop() {
       pos = 1;
     } 
 
-    // Si on est a droite, on va au milieu.
+    // Si on est à droite, on va au milieu.
     else if (pos == 3) {
       microbit.drawPixel(1, 4, LED_OFF);
       microbit.drawPixel(2, 4, LED_ON);
@@ -452,7 +452,7 @@ void loop() {
       microbit.drawPixel(3, 4, LED_ON);
       pos = 3;
 
-    // Si on va a gauche, on va au milieu.
+    // Si on va à gauche, on va au milieu.
     } else if (pos == 1) {
       microbit.drawPixel(1, 4, LED_OFF);
       microbit.drawPixel(2, 4, LED_ON);
