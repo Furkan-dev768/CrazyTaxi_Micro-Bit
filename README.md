@@ -172,7 +172,7 @@ Le projet a été rigoureusement testé selon un protocole complet :
 
 **Résultat** : **0 bug détecté** lors des tests finaux ! 🎉
 
-Pour plus de détails, consultez le [rapport de test complet](docs/rapport-de-test.pdf).
+Pour plus de détails, consultez le [nos tests effectués](docs/tests_effectués.pdf).
 
 ---
 
