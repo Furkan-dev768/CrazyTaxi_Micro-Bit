@@ -96,7 +96,6 @@ Téléchargez et installez la dernière version de l'environnement de développe
 
 - **Bouton A** : Déplacer le taxi vers la **gauche**
 - **Bouton B** : Déplacer le taxi vers la **droite**
-- **A + B** : Recommencer une partie
 
 ### Règles du jeu
 
