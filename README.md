@@ -50,11 +50,11 @@
 
 ### Méthode 1 : Compilation avec Arduino IDE
 
-#### 2.1 Télécharger Arduino IDE
+#### 1.1 Télécharger Arduino IDE
 
 Téléchargez et installez la dernière version de l'environnement de développement Arduino depuis le [site officiel](https://www.arduino.cc/en/software).
 
-#### 2.2 Ajouter le gestionnaire nRF5
+#### 1.2 Ajouter le gestionnaire nRF5
 
 1. Dans Arduino IDE, allez dans **Fichier → Préférences**
 2. Ajoutez cette URL dans **"Gestionnaire de cartes supplémentaires"** :
@@ -63,19 +63,19 @@ Téléchargez et installez la dernière version de l'environnement de développe
    ```
 3. Cliquez sur **OK**
 
-#### 2.3 Installer les cartes Nordic
+#### 1.3 Installer les cartes Nordic
 
 1. Allez dans **Outils → Type de carte → Gestionnaire de cartes**
 2. Recherchez **"nRF5"**
 3. Installez **"Nordic Semiconductor nRF5 Boards"** par Sandeep Mistry
 
-#### 2.4 Sélectionner la carte
+#### 1.4 Sélectionner la carte
 
 1. Ouvrez le fichier `CrazyTaxi_MicroBit.ino` dans Arduino IDE
 2. Allez dans **Outils → Type de carte → Nordic Semiconductor nRF5 Boards**
 3. Sélectionnez **BBC micro:bit** (V1) ou **BBC micro:bit V2** selon votre modèle
 
-#### 2.5 Choisir le port
+#### 1.5 Choisir le port
 
 1. Connectez votre **micro:bit** via USB
 2. Allez dans **Outils → Port**
@@ -83,7 +83,7 @@ Téléchargez et installez la dernière version de l'environnement de développe
    - **COM** suivi d'un numéro sur Windows (ex: COM3)
    - **/dev/tty** sur macOS/Linux (ex: /dev/ttyACM0)
 
-#### 2.6 Compiler et téléverser
+#### 1.6 Compiler et téléverser
 
 1. Cliquez sur le bouton **Téléverser** (→) pour compiler et envoyer le programme
 2. Le premier téléversement peut prendre quelques minutes
