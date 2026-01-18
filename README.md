@@ -211,4 +211,4 @@ Pour toute question ou suggestion :
 
 ---
 
-**Fait avec ❤️ par l'équipe Crazy Taxi**
+**Fait avec ❤️ par l'équipe Crazy Taxi Micro:Bit - Tomás - Furkan - Hakan - Emirhan**
